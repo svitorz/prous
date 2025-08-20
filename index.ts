@@ -1,11 +1,10 @@
 import express from "express";
-import db from "./src/db/database";
 const app = express();
 const port = 3000;
 
 async function bootstrap() {
   app.get("/", (req, res) => {
-    res.send("Hello World!");
+    res.send({ body: "Hello, World!", status: "ok", code: 200 });
   });
 
   app.listen(port, () => {
